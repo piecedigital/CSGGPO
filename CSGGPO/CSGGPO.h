@@ -9,6 +9,6 @@ namespace CSGGPO {
 	public ref class GGPO
 	{
 	public:
-		int Test();
+		int Test(intptr_t& sessionRef);
 	};
 }

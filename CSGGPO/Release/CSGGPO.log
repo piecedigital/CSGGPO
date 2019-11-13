@@ -1,2 +1,3 @@
 ﻿  CSGGPO.cpp
+CSGGPO.obj : warning LNK4248: unresolved typeref token (01000016) for 'GGPOSession'; image may not run
   CSGGPO.vcxproj -> G:\ggpo\CSGGPO\CSGGPO\Release\CSGGPO.dll
