@@ -3,12 +3,8 @@
 #include <string>
 #include "ggponet.h"
 
-using namespace System;
+extern "C" {
+	typedef bool (*BeginDelegate)(char* game);
 
-namespace CSGGPO {
-	public ref class GGPO
-	{
-	public:
-		int Test(intptr_t& sessionRef);
-	};
+	__declspec(dllexport) int __stdcall Test(intptr_t& sessionRef, BeginDelegate beginCallback);
 }

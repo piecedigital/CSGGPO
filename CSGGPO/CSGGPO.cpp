@@ -2,13 +2,11 @@
 
 #include "CSGGPO.h"
 
-using namespace CSGGPO;
-
-int GGPO:: Test(intptr_t &sessionRef)
+__declspec(dllexport) int __stdcall Test(intptr_t &sessionRef, BeginDelegate beginCallback)
 {
 	GGPOSession* session;
 	GGPOSessionCallbacks callbacks;
-	// callbacks.begin_game
+	callbacks.begin_game = beginCallback;
 	char* game = "test_game";
 	int player_count = 2;
 	int input_size = sizeof(int);
