@@ -2,7 +2,7 @@
 
 #include "CSGGPO.h"
 
-__declspec(dllexport) int __stdcall Test(intptr_t &sessionRef, BeginDelegate beginCallback)
+EXPFNC(int) StartSession(intptr_t &sessionRef, BeginDelegate beginCallback)
 {
 	GGPOSession* session;
 	GGPOSessionCallbacks callbacks;

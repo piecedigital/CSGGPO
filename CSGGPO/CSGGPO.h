@@ -4,7 +4,9 @@
 #include "ggponet.h"
 
 extern "C" {
+#define EXPFNC(rtype) __declspec(dllexport) rtype __stdcall
+
 	typedef bool (*BeginDelegate)(char* game);
 
-	__declspec(dllexport) int __stdcall Test(intptr_t& sessionRef, BeginDelegate beginCallback);
+	EXPFNC(int) StartSession(intptr_t& sessionRef, BeginDelegate beginCallback);
 }
