@@ -1,4 +1,8 @@
-﻿  CSGGPO.cpp
+﻿  pch.cpp
+  AssemblyInfo.cpp
+  CSGGPO.cpp
+  Generating Code...
+G:\ggpo\CSGGPO\CSGGPO\CSGGPO\CSGGPO.cpp(16,15): warning C4101:  'session': unreferenced local variable
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
      Creating library G:\ggpo\CSGGPO\CSGGPO\Release\CSGGPO.lib and object G:\ggpo\CSGGPO\CSGGPO\Release\CSGGPO.exp
-CSGGPO.obj : warning LNK4248: unresolved typeref token (01000016) for 'GGPOSession'; image may not run
   CSGGPO.vcxproj -> G:\ggpo\CSGGPO\CSGGPO\Release\CSGGPO.dll
