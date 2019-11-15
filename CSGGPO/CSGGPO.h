@@ -7,12 +7,12 @@ extern "C" {
 #define EXPFNC(rtype) __declspec(dllexport) rtype __stdcall
 
 	typedef bool (*BeginGameDelegate)(char* game);
-	typedef bool (*SaveGameStateDelegate)(char* game);
-	typedef bool (*LoadGameStateDelegate)(char* game);
-	typedef bool (*LogGameStateDelegate)(char* game);
-	typedef bool (*FreeBufferDelegate)(char* game);
-	typedef bool (*AdvanceFrameDelegate)(char* game);
-	typedef bool (*OnEventDelegate)(char* game);
+	typedef bool (*SaveGameStateDelegate)(unsigned char** buffer, int* len, int* checksum, int frame);
+	typedef bool (*LoadGameStateDelegate)(unsigned char* buffer, int len);
+	typedef bool (*LogGameStateDelegate)(char* filename, unsigned char* buffer, int len);
+	typedef void (*FreeBufferDelegate)(void* buffer);
+	typedef bool (*AdvanceFrameDelegate)(int flags);
+	typedef bool (*OnEventDelegate)(GGPOEvent* info);
 
 	EXPFNC(int) CGStartSession(
 		intptr_t& sessionRef,
