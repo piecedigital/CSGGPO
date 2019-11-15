@@ -2,11 +2,20 @@
 
 #include "CSGGPO.h"
 
-EXPFNC(int) StartSession(intptr_t &sessionRef, BeginDelegate beginCallback)
+EXPFNC(int) CGStartSession(
+	intptr_t &sessionRef,
+	BeginGameDelegate beginGameCallback,
+	SaveGameStateDelegate saveGameStateCallback,
+	LoadGameStateDelegate loadGameStateCallback,
+	LogGameStateDelegate logGameStateCallback,
+	FreeBufferDelegate freeBufferCallback,
+	AdvanceFrameDelegate advanceFrameCallback,
+	OnEventDelegate onEventCallback
+)
 {
 	GGPOSession* session;
 	GGPOSessionCallbacks callbacks;
-	callbacks.begin_game = beginCallback;
+	callbacks.begin_game = beginGameCallback;
 	char* game = "test_game";
 	int player_count = 2;
 	int input_size = sizeof(int);
