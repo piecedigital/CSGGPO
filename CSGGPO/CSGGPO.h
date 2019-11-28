@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include "ggponet.h"
+#include "bin/ggponet.h"
 
 extern "C" {
 #define EXPFNC(rtype) __declspec(dllexport) rtype __stdcall

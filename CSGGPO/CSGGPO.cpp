@@ -1,7 +1,12 @@
 #include "pch.h"
 
 #include "CSGGPO.h"
-
+typedef struct {
+	char* foo;
+	char* betty;
+	char* foobar;
+	bool itIs;
+} GameState;
 EXPFNC(int) CGStartSession(
 	intptr_t &sessionRef,
 	BeginGameDelegate beginGameCallback,
@@ -28,7 +33,18 @@ EXPFNC(int) CGStartSession(
 	int localpost = 9970;
 
 	beginGameCallback("test_game");
-	// saveGameStateCallback(unsigned char** buffer, int* len, int* checksum, int frame);
+
+	GameState gs;
+	gs.foo = "bar";
+	gs.betty = "boop";
+	gs.foobar = "bettyboop";
+	gs.itIs = false;
+	int len = sizeof(gs);
+	unsigned char *buffer = (unsigned char *)malloc(len);
+	memcpy(&buffer, &gs, len);
+	int checksum = 0;
+	int frame = 0;
+	saveGameStateCallback(&buffer, &len, &checksum, frame);
 	// loadGameStateCallback(unsigned char* buffer, int len);
 	// logGameStateCallback(char* filename, unsigned char* buffer, int len);
 	// freeBufferCallback(void* buffer);

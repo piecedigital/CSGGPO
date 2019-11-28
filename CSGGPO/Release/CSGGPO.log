@@ -1,8 +1,4 @@
-﻿  pch.cpp
-  AssemblyInfo.cpp
-  CSGGPO.cpp
-  Generating Code...
-G:\ggpo\CSGGPO\CSGGPO\CSGGPO\CSGGPO.cpp(16,15): warning C4101:  'session': unreferenced local variable
-  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+﻿  CSGGPO.cpp
+G:\ggpo\CSGGPO\CSGGPO\CSGGPO\CSGGPO.cpp(21,15): warning C4101:  'session': unreferenced local variable
      Creating library G:\ggpo\CSGGPO\CSGGPO\Release\CSGGPO.lib and object G:\ggpo\CSGGPO\CSGGPO\Release\CSGGPO.exp
   CSGGPO.vcxproj -> G:\ggpo\CSGGPO\CSGGPO\Release\CSGGPO.dll
